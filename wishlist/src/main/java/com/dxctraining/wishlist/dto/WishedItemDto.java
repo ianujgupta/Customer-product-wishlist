@@ -8,6 +8,10 @@ public class WishedItemDto {
 
 	private String productId;
 
+	private String customerName;
+
+	private String productName;
+
 	public WishedItemDto() {
 	}
 
@@ -15,6 +19,23 @@ public class WishedItemDto {
 		this.id = id;
 		this.CustomerId = customerId;
 		this.productId = productId;
+	}
+	
+
+	public String getCustomerName() {
+		return customerName;
+	}
+
+	public void setCustomerName(String customerName) {
+		this.customerName = customerName;
+	}
+
+	public String getProductName() {
+		return productName;
+	}
+
+	public void setProductName(String productName) {
+		this.productName = productName;
 	}
 
 	public String getId() {

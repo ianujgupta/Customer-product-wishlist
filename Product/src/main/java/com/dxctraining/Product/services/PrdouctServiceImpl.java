@@ -52,4 +52,10 @@ public class PrdouctServiceImpl implements IProductService {
 		return list;
 	}
 
+	@Override
+	public List<Product> findProductByName(String name) {
+		List<Product>list = dao.findByName(name);
+		return list;
+	}
+
 }

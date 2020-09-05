@@ -47,7 +47,7 @@ public class CustomerRestController {
 		return response;
 	}
 
-	@GetMapping("/{name}")
+	@GetMapping("getname/{name}")
 	@ResponseStatus(HttpStatus.OK)
 	public List<CustomerDto> findCustomerByName(@PathVariable("name") String name) {
 		List<Customer> list = service.findByName(name);

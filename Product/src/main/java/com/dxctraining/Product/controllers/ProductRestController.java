@@ -45,6 +45,19 @@ public class ProductRestController {
 		return response;
 	}
 
+	@GetMapping("/get/product/{name}")
+	@ResponseStatus(HttpStatus.OK)
+	public List<ProductDto> fetchProductByName(@PathVariable("name") String name) {
+		List<Product> list = service.findProductByName(name);
+		List<ProductDto> response = new ArrayList<>();
+		for (Product product : list) {
+			ProductDto productDto = util.productDto(product);
+			response.add(productDto);
+		}
+		return response;
+
+	}
+
 	@GetMapping("/allproducts")
 	public List<ProductDto> fetchAll() {
 		List<Product> list = service.findAll();

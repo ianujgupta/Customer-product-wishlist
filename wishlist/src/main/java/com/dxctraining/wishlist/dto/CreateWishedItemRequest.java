@@ -3,7 +3,7 @@ package com.dxctraining.wishlist.dto;
 public class CreateWishedItemRequest {
 
 	private Integer customerId;
-	
+
 	private String productId;
 
 	public Integer getCustomerId() {

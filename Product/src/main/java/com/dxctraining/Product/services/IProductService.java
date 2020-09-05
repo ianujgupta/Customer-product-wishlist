@@ -13,5 +13,7 @@ public interface IProductService {
 	Product findById(String id);
 	
 	List<Product> findAll();
+	
+	List<Product> findProductByName(String name);
 }
 

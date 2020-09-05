@@ -8,9 +8,15 @@ import com.dxctraining.wishlist.entities.WishedItem;
 @Component
 public class WishedItemUtil {
 
-	public WishedItemDto wishedItemDto(WishedItem item) {
+	public WishedItemDto wishedItemDto(WishedItem item, Integer customerId, String customerName, String productId,
+			String productName) {
 		WishedItemDto dto = new WishedItemDto(item.getId(), item.getCustomerId(), item.getProductId());
-		return dto;
-	}
+		dto.setCustomerId(customerId);
+		dto.setCustomerName(customerName);
+		dto.setProductId(productId);
+		dto.setProductName(productName);
 
+		return dto;
+
+	}
 }

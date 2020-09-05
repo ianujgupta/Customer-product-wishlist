@@ -11,8 +11,6 @@ import javax.persistence.Table;
 public class WishedItem {
 
 	@Id
-	@GeneratedValue
-//	@Column(name = "PR_KEY")
 	private String id;
 
 	private Integer customerId;
